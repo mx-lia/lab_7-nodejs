@@ -16,6 +16,6 @@ let request_handler = (req, res) => {
 
 let server = http.createServer();
 server.listen(5000);
-server.on('request', request_handler)
+server.on('request', request_handler);
 
-console.log('Server running at http://localhost:5000/');
+console.log('Server running at http://localhost:5000/test.html');
