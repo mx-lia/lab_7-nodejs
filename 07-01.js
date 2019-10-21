@@ -1,11 +1,11 @@
 const http = require('http');
-const GET_handler = require('./m07-01');
+const GET_handler = require('./m07-01')('./files');
 const err_handler = require('./err_module');
 
 let request_handler = (req, res) => {
   switch (req.method) {
       case 'GET': {
-          GET_handler(req, res);
+          GET_handler.sendFile(req, res);
           break;
       }
       default: {
